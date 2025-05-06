@@ -12,5 +12,8 @@ def calculate(value):
             abort(404)
     except ValueError:
         abort(400)
-
-    return {}
+    result = {
+        "dec": number - 1,
+        "hex": hex (number)
+    }
+    return jsonify(result)
